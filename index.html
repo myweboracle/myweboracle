@@ -1,24 +1,35 @@
-<!doctype html>
+<!doctype html 5>
 
+<!-- 
+-----------------------------Code by @Woksi123----------------------------------
+-->
 <html>
-<head>	
+<head>
+    <meta charset="UTF-8">
+
+  <title>myWebOracle</title>
+   <link rel = "icon" href =  "iconSmall.png" type = "image/x-icon"> 
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+  <script src="sketch.js"></script>
+
 <style>
 
-	 body {
-            margin: auto;
-            background-color: white;
-            cursor: crosshair;
-            height: 100%;
-            
-            font-family: arial;
+body {
+        margin: auto;
+        background-color: white;
+        cursor: crosshair;
+        height: 100%;
+        
+        font-family: arial;
 
-
-font-size: 3vw;
+/*------------Global FONTSIZE----------*/
+        font-size: 3vw;
 }
 
 .container {
 margin:auto;
-height: 100%;
+height: 95%;
 width: 50%;
 min-width: 300px;
 
@@ -192,9 +203,6 @@ a {
  }
 
 </style>
-   <link rel = "icon" href =  
-"iconSmall.png" 
-        type = "image/x-icon"> 
 
 </head>
 
@@ -203,13 +211,13 @@ a {
 
 <div class="container">
   <div class="box">
-  <a href=button1.html> <button class="header">myweboracel.github.io </button> </a> 
+  <a href="https://myweboracle.github.io"> <button class="header">myweboracle.github.io </button> </a> 
  
     <div class="buttonContainer">
-  	 <button class="button"> <a href=button1.html> Ask </a></button> </div>
+  	 <button class="button" id="_bigButton"> <a > Ask </a></button> </div>
  
 
-    <div class="textBox">  <span id="myText"> The weboracle doesnt provide definitive answers. </span>  </div>
+    <div class="textBox">  <span id="myText"> you can ask the oracle if you want to </span>  </div>
  
     <div class="buttonBox">
       <button name="button1" class="footerButtons">1</button>
