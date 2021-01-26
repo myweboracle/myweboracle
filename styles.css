@@ -2,49 +2,47 @@
 
 @font-face {
   font-family: redaction;
-  src: url(./Redaction_20-regular.woff2.ttf),
-      local: "Redaction 20";
-;
+  src: url('./fonts/Redaction_20-regular.woff2')
+  ;
 
   font-style: normal;
 }
 @font-face {
   font-family: redaction;
+  src: url("./fonts/Redaction_20-italic.woff2");
 
-  src: url(./Redaction_20-italic.woff2.ttf),
-      local: "Redaction 20 Italic";
   font-style: italic;
 }
 @font-face {
   font-family: redaction;
-  src:   local: "Redaction 20 Bold",
-url(./Redaction_20-bold.woff2.ttf);
-  
+  src: url('./fonts/Redaction_20-bold.woff2');
   font-style: oblique;
 }
 
 html * {
-font-family: "redaction";
+font-family: redaction;
 }
 
 
 body {
         margin: auto;
+
         background-color: white;
         cursor: crosshair;
+        min-height: 600;
         height: 100%;
-        
+
 
 /*------------Global FONTSIZE----------*/
         font-size: 3.5vw;
-  font-family: "redaction";
+  font-family: redaction;
 }
 
 .container {
+
 margin:auto;
-height: 95%;
 width: 50%;
-min-width: 300px;
+min-width: 600px;
 
  
 
@@ -57,11 +55,24 @@ animation: fadeIn ease 0.1s;
 
 .box
 {
-  margin-top:auto;
+
+margin-top:0.1rem;
 padding: 2rem;
+padding-top: 0.5rem;
+padding-bottom: 0.5rem;
+
+
+overflow: auto;
+
+
+ display: flex;
+ flex-direction: column;
+align-items: space-between;
+align-content: center;
+
+
   box-sizing: border-box;
 
- height: 100%;
   width:100%;
 
   background-color: silver;
@@ -71,10 +82,12 @@ border-color: black;
 border-width: 0.2rem;
 
 
+
 }
 
 .header{
 
+text-decoration: none;
 width: 100%;
 margin: auto;
 
@@ -90,7 +103,7 @@ font-size: 75%;
 cursor: pointer;
 
 
-font-style: oblique;
+font-style: regular;
 
 
 }
@@ -98,16 +111,17 @@ font-style: oblique;
 .buttonContainer {
  display: flex;
  justify-content: center;
-   align-items: center; }
+ /*align-items: center;*/
+  }
 
-.button {
+.bigButton {
 
  width:100%;
  height: 100%;
 
 
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   margin:0.6rem;
 
 
@@ -121,23 +135,31 @@ cursor: pointer;
 
 
 font-size: 333%;
+text-align: center;
+
+
 }
 
-.button:hover{
-font-style: italic;
+.bigButton:hover{
+font-style: oblique;
 }
 
-.button:active {
+.bigButton:active,focus {
+  transform: translateY(10%) ;
   background-color: white;
-  transform: translateY(10%);
+
+    outline: none;
+    border-color: black;
+
+
         }
-
 .textBox{
-
-margin:auto;
+margin: auto;
 width: 100%;
 padding:1rem;
 box-sizing: border-box;
+min-height: 10rem;
+
 
 
 background-color: white;
@@ -145,8 +167,10 @@ border-style: solid;
 border-width: 0.2rem;
 border-color: black;
 border-radius: 1rem;
-
 text-align: center;
+
+display: flex;
+justify-content: center;
 
 
 }
@@ -156,12 +180,12 @@ text-align: center;
 padding: 0.3rem;
 width: 100%;
 
-  margin:auto;
-  margin-top:0.5rem;
-
-
   display: flex;
  justify-content: right;
+
+
+
+align-self:flex-end;
 
 /*
 border-style: dashed;
@@ -173,7 +197,7 @@ border-radius: 1rem;
 }
 
 .footerButtons{
-
+ 
 background-color: white;
 border-style: solid;
 border-width: 0.2rem;
@@ -187,27 +211,42 @@ text-align: center;
 cursor: pointer;
 
 padding: 0.1rem;
-margin-top: 0.5rem;
+margin-top: 0.3rem;
+margin-bottom:0.3rem;
 
-font-size: 200%;
+font-size: 150%;
+
 
 }
 
 .footerButtons:active {
   transform: translateY(10%);
+  outline: none;
+
 }
+
 
 button{  
 }
-a {
-  
 
+
+
+a:visited {
     text-decoration: none;
     color:black;
 }
 
+a {
+      text-decoration: none;
+    color:black;
+}
+
+
 .myTextSpan{
   animation: fadeIn ease 4s;
+  margin-top:auto;
+  margin-bottom: auto;
+
 
 }
 
@@ -218,4 +257,29 @@ a {
    0% {opacity: 0;}
    100% {opacity: 1;}
 } 
- }
+
+.popUp{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+width: 40%;
+
+margin: auto;
+padding:1rem;
+box-sizing: border-box;
+min-height: 15rem;
+
+
+background-color: white;
+border-style: solid;
+border-width: 0.2rem;
+border-color: black;
+border-radius: 1rem;
+text-align: center;
+
+font-size: 100%;
+}
+
+

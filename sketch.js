@@ -1,20 +1,21 @@
 
 // -----dom elements variables ------------
 let bigButton;
+let whatButton;
+
 
 let myTextObject;
 let myText;
 let myTextBox;
-
+let whatText;
 
 var traceryQuote;
 var grammar;
 
 let buttonSound;
-
-function preload(){
-	buttonSound = loadSound('button-click-3.mp3');
-}
+let bigButtonSound;
+	
+let whatClicked = false;
 
 
 function setup(){
@@ -24,9 +25,16 @@ function setup(){
 	myTextBox=document.querySelector("#_myTextBox");
 	myTextObject=document.querySelector("#_myText");
 	bigButton=document.querySelector('#_bigButton');
+	whatButton=document.querySelector('#_whatButton');
+	
+	whatButton.addEventListener("click",whatButtonPressed);
 	bigButton.addEventListener("click",bigButtonPressed);
 	//------------------------------------------------------------
 	
+
+	//------load sounds
+	bigButtonSound = loadSound("correct-blips.ogg"); 
+	buttonSound = loadSound("button-click-3.ogg"); //('button-click-3.mp3');
 
 
 
@@ -55,20 +63,66 @@ function bigButtonPressed(){
 	newText.addClass("myTextSpan");
 		newText.parent(myTextObject);
 
-
+	bigButtonSound.play();
 
 
 }
+
+function whatButtonPressed(){
+	console.log("what buton Pressed");
+	    console.log(whatClicked);
+
+	if (!whatClicked) {
+	        
+ 	whatText = createDiv(
+    	"myweboracle.github.io is an exploration of magical computing. <a> -> more </a>"
+    	
+    	);
+
+	whatText.addClass("popUp");
+	whatClicked=true;
+	}
+
+    else if (whatClicked){
+    	whatText.hide();
+    	whatClicked=false;
+
+	   }
+
+    buttonSound.play();
+
+
+}
+
+
 
 function mousePressed(){
-	buttonSound.play();
+	if (whatClicked){
+    	
+    	whatText.hide();
+    	whatClicked=false;
+
+    	buttonSound.play();
+
+	   }
+
 }
+
 
 
 function generateQuoteText(){
 	myText = grammar.flatten("#origin#");
 
 }
+
+
+
+
+
+
+
+
+
 
 
 function setupTracery(){
