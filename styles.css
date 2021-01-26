@@ -8,7 +8,7 @@
 }
 @font-face {
   font-family: redaction;
-  src: url('../fonts/Redaction_20-italic.woff2');
+  src: url('Redaction_20-italic.woff2');
 
   font-style: italic;
 }
