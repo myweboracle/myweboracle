@@ -10,199 +10,32 @@
   <title>myWebOracle</title>
    <link rel = "icon" href =  "iconSmall.png" type = "image/x-icon"> 
 
+
+
+
+<!------ --------------import libraries------------- --->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.js"></script><!-- Using the offical p5.js CDN https://cdnjs.com/libraries/p5.js -->
+    
+
+
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+<script src="tracery.js"></script>
+
+
+
   <script src="sketch.js"></script>
 
-<style>
-
-body {
-        margin: auto;
-        background-color: white;
-        cursor: crosshair;
-        height: 100%;
-        
-        font-family: arial;
-
-/*------------Global FONTSIZE----------*/
-        font-size: 3vw;
-}
-
-.container {
-margin:auto;
-height: 95%;
-width: 50%;
-min-width: 300px;
-
- 
-
-/*-----------animation -----*/
-
-animation: fadeIn ease 0.1s;
+<!----- import Fonts ------->
 
 
-}
+<!--- old font
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,700;1,700&display=swap" rel="stylesheet"> 
+--->
 
-.box
-{
-  margin-top:auto;
-padding: 2rem;
-  box-sizing: border-box;
-
- height: 100%;
-  width:100%;
-
-  background-color: silver;
-border-radius: 1rem;
-border-style: solid;
-border-color: black;
-border-width: 0.1rem;
-box-shadow: 0 0 3px grey;
-
-
-}
-
-.header{
-width: 100%;
-margin: auto;
-
-background-color: white;
-border-style: solid;
-border-width: 0.2rem;
-border-color: black;
-border-radius: 1rem;
-
-text-align: center;
-padding: 0.1rem;
-
-font-size: 125%;
-cursor: pointer;
-
-}
-
-.buttonContainer {
- display: flex;
- justify-content: center;
-   align-items: center; }
-
-.button {
-
- width:100%;
- height: 100%;
-
-
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  margin:-0.6rem;
-
-
-background-color:white;
-border-radius: 50%;
-border-width: 0.2rem;
-border-color: black;
-border-style: solid;
-
-box-shadow: 0 0 10px gray;
-cursor: pointer;
-
-
-font-size: 333%;
-}
-
-.button:hover{
-font-style: italic;
-}
-
-.button:active {
-  background-color: white;
-  transform: translateY(10%);
-        }
-
-.textBox{
-
-margin:auto;
-width: 100%;
-padding:1rem;
-box-sizing: border-box;
-
-
-background-color: white;
-border-style: solid;
-border-width: 0.2rem;
-border-color: black;
-border-radius: 1rem;
-
-text-align: center;
-
-
-}
-
-
-.buttonBox{
-padding: 0.3rem;
-width: 100%;
-
-  margin:auto;
-  margin-top:-1rem;
-
-
-  display: flex;
- justify-content: right;
-
-/*
-border-style: dashed;
-border-width: 0.01rem;
-border-radius: 1rem;
-*/
-
-
-}
-
-.footerButtons{
-
-background-color: white;
-border-style: solid;
-border-width: 0.2rem;
-border-color: black;
-border-radius: 50%;
-
-width: 7rem;
-height: 7rem;
-
-text-align: center;
-cursor: pointer;
-
-padding: 0.1rem;
-margin-top: -0rem;
-
-font-size: 200%;
-
-}
-
-.footerButtons:active {
-  transform: translateY(10%);
-}
-
-
-a {
-    text-decoration: none;
-    color:black;
-}
-
-#myText{
-  animation: fadeIn ease 4s;
-
-}
-
-
-
- /*-----//ANIMATION//------- */
-@keyframes fadeIn {
-   0% {opacity: 0;}
-   100% {opacity: 1;}
-} 
- }
-
-</style>
+    <link rel="stylesheet" href="styles.css">
 
 </head>
 
@@ -217,12 +50,11 @@ a {
   	 <button class="button" id="_bigButton"> <a > Ask </a></button> </div>
  
 
-    <div class="textBox">  <span id="myText"> you can ask the oracle if you want to </span>  </div>
+    <div class="textBox" id="_myTextBox">  <span id="_myText" class="myTextSpan"> you can ask the oracle if you want to </span>  </div>
  
     <div class="buttonBox">
-      <button name="button1" class="footerButtons">1</button>
-      <button name="button1" class="footerButtons">2</button>     
- 
+      <button class="footerButtons">?</button>
+    
 
     </div>
 
