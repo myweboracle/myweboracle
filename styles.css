@@ -2,20 +2,24 @@
 
 @font-face {
   font-family: redaction;
-  src: url(./fonts/Redaction_20-regular.woff2.ttf);
+  src: url(./Redaction_20-regular.woff2.ttf),
+      local: "Redaction 20 Regular";
+;
 
   font-style: normal;
 }
 @font-face {
   font-family: redaction;
-  local: "Redaction_20-italic";
 
-  src: url(./fonts/Redaction_20-italic.woff2.ttf);
+  src: url(./Redaction_20-italic.woff2.ttf),
+      local: "Redaction 20 Italic";
   font-style: italic;
 }
 @font-face {
   font-family: redaction;
-  src: url(./fonts/Redaction_20-bold.woff2.ttf);
+  src:   local: "Redaction 20 Bold",
+url(./Redaction_20-bold.woff2.ttf);
+  
   font-style: oblique;
 }
 
