@@ -2,19 +2,19 @@
 
 @font-face {
   font-family: redaction;
-  src: url('fonts/Redaction_20-regular.woff2');
+  src: url('https://raw.githubusercontent.com/myweboracle/myweboracle.github.io/blob/main/fonts/Redaction_35-regular.woff2');
 
   font-style: normal;
 }
 @font-face {
   font-family: redaction;
-  src: url('fonts/Redaction_20-italic.woff2');
+  src: url('https://raw.githubusercontent.com/myweboracle/myweboracle.github.io/blob/main/fonts/Redaction_35-italic.woff2');
 
   font-style: italic;
 }
 @font-face {
   font-family: redaction;
-  src: url('fonts/Redaction_20-bold.woff2');
+  src: url('https://raw.githubusercontent.com/myweboracle/myweboracle.github.io/blob/main/fonts/Redaction_35-bold.woff2');
   font-style: oblique;
 }
 
