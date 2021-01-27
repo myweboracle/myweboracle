@@ -75,7 +75,7 @@ function whatButtonPressed(){
 	if (!whatClicked) {
 	        
  	whatText = createDiv(
-    	"myweboracle.github.io is an exploration of magical computing. <a> -> more </a>"
+    	"myweboracle.github.io is an exploration into magical computing"
     	
     	);
 
