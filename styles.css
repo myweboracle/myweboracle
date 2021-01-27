@@ -131,10 +131,12 @@ align-content: center;
   width:100%;
 
   background-color: silver;
-border-radius: 1rem;
+border-radius: 2rem;
 border-style: solid;
 border-color: black;
-border-width: 0.2rem;
+border-width: 0.15rem;
+
+box-shadow: 7px 5px 20px grey;
 
 
 
