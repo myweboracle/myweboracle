@@ -2,32 +2,34 @@
 
 @font-face {
   font-family: "redaction";
-  src: url('./fonts/Redaction20-Regular.woff2')
-  ;
+  src: url('./fonts/Redaction20-Regular.woff2') format("woff"),
+  local("Redaction 20");
 
   font-style: normal;
 }
 @font-face {
   font-family: "redaction";
-  src: url("./fonts/Redaction20-Italic.woff2");
+  src: url("./fonts/Redaction20-Italic.woff2") format("woff"),
+  local("Redaction 20 Italic");;
 
   font-style: italic;
 }
 @font-face {
   font-family: "redaction";
-  src: url('./fonts/Redaction20-Bold.woff2');
+  src: url('./fonts/Redaction20-Bold.woff2') format("woff"),
+  local("Redaction 20 Bold");;
   font-style: oblique;
 }
 
 html * {
-font-family: "redaction";
+font-family: "redaction", Arial;
 }
 
 
 body {
         margin: auto;
 
-        background-color: white;
+        background-color: #fefefa;
         cursor: crosshair;
         min-height: 600;
         height: 100%;
@@ -38,13 +40,65 @@ body {
   font-family: redaction;
 }
 
+@media (orientation: landscape) {
+  body{ background-color:#fefefa;
+   }  
+
+
+  .container {
+
+      margin:auto;
+      width: 50%;
+      min-width: 600px;
+
+
+    }
+  .box{
+    overflow: auto;
+
+  }
+}
+
+@media (orientation: portrait) {
+
+
+  body{ 
+    background-color:#fefefa;
+    font-size: 10vw;
+
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+      width: 97%;
+      display: flex;
+      align-content: center;
+      justify-content: center;
+
+   }
+
+
+  .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  
+      width: 95%;
+
+
+  }
+  .box{
+        min-height: 900px;
+      }
+}
+
+
 .container {
-
-margin:auto;
-width: 50%;
-min-width: 600px;
-
- 
 
 /*-----------animation -----*/
 
@@ -56,18 +110,19 @@ animation: fadeIn ease 0.1s;
 .box
 {
 
+
 margin-top:0.1rem;
 padding: 2rem;
 padding-top: 0.5rem;
 padding-bottom: 0.5rem;
 
 
-overflow: auto;
 
 
  display: flex;
  flex-direction: column;
 align-items: space-between;
+justify-content: space-between;
 align-content: center;
 
 
@@ -90,6 +145,8 @@ border-width: 0.2rem;
 text-decoration: none;
 width: 100%;
 margin: auto;
+margin-top: 1rem;
+
 
 background-color: white;
 border-style: solid;
@@ -120,9 +177,12 @@ font-style: regular;
  height: 100%;
 
 
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  margin:0.6rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+
+  margin:auto;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
 
 
 background-color:white;
@@ -265,6 +325,7 @@ a {
 
   transform: translate(-50%, -50%);
 width: 40%;
+min-width: 37rem;
 
 margin: auto;
 padding:1rem;
