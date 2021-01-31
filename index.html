@@ -14,9 +14,8 @@
 
 
 <!------ --------------import libraries------------- --->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.js"></script><!-- Using the offical p5.js CDN https://cdnjs.com/libraries/p5.js -->
+  <script src="p5.js"></script>
+  <script src="p5.sound.min.js"></script>
     
 
 
@@ -43,18 +42,18 @@
 <body>
 
 <div class="container">
-  <div class="box">
-  <div class="header"><a href="https://myweboracle.github.io"> myweboracle.github.io </a> </div>
+  <div class="cardBody" id="_cardBody">
+  <div class="header"><a href="index.html"> MyWebOracle</a> </div>
  
     <div class="buttonContainer">
-  	 <div class="bigButton" id="_bigButton"> <a > Ask </a></div> </div>
+  	 <div class="bigButton clickAble" id="_bigButton"> <div class="bigButtonText"> Ask </div></div> </div>
  
 
-    <div class="textBox" id="_myTextBox">  <span id="_myText" class="myTextSpan"> you can ask the oracle about the future </span>  </div>
+    <div class="textBox" id="_myTextBox">  <span id="_myText" class="myOGTextSpan"> you can ask the oracle for some magic </span>  </div>
  
 
     <div class="buttonBox">
-      <div class="footerButtons" id="_whatButton">?</div>
+      <div class="footerButtons clickAble"  id="_whatButton">?</div>
     
     </div>
 
