@@ -99,7 +99,7 @@ function setup(){
 	bigButtonSound = loadSound("./ressources/correct-blips.ogg"); 
 	buttonSound = loadSound("./ressources/button-click-3.ogg",checkSoundLoaded()); //('button-click-3.mp3');
     plingSound = loadSound("./ressources/littleBellSound.ogg");
-    //checkSoundLoaded();
+    checkSoundLoaded();
 	
 	//------------tracery------------
 	setupTracery();
@@ -114,7 +114,7 @@ function setup(){
 
 function bigButtonPressed(){
 
-
+checkSoundLoaded();
 if (!bigButtonPressedYes) {
 	console.log("click");
 
@@ -241,8 +241,8 @@ function generateQuoteText(){
 
 function checkSoundLoaded(){
 
-	//isSoundLoaded=buttonSound.isLoaded();
-	isSoundLoaded=true;
+	isSoundLoaded=bigButtonSound.isLoaded();
+	//isSoundLoaded=true;
 
 	console.log("sound loaded is", isSoundLoaded);
 
@@ -258,17 +258,23 @@ traceryQuote= {
 ],
 
 "saying":[
-"#posVerb.capitalize# your #magicConcept#",
-"Dont #negVerb# your #magicConcept#",
-"#magicConcept.capitalize# #isVerb# #magicConcept#",
-"#magicConcept.capitalize# #isVerb# #magicState#",
-"#verb.capitalize# the #object# of #magicConcept#",
-"#prePo.capitalize# #object# #possibility# #verb# your #magicConcept#",
-"#prePo.capitalize# #object# #possibility# #negVerb# your #magicConcept#",
-"Comes #magicConcept#, comes #magicConcept#"
+"#posVerb.capitalize# your #magicConcept# #magicStateOrNot#",
+
+"Dont #negVerb# your #magicConcept# #magicStateOrNot#",
+
+"#magicConcept.capitalize# #isVerb# #magicConcept# #magicStateOrNot#",
+
+
+"#verb.capitalize# the #object# of #magicConcept# #magicStateOrNot#",
+
+"#prePo.capitalize# #object# #possibility# #verb# your #magicConcept# #magicStateOrNot#",
+
+"#prePo.capitalize# #object# #possibility# #negVerb# your #magicConcept# #magicStateOrNot#",
+
+"Comes #magicConcept#, comes #magicConcept# #magicStateOrNot#"
 
 ],
-
+"magicStateOrNot":["#magicState#","","",""],
 
 
 "prePo":["a", "the", "your"],
@@ -313,7 +319,10 @@ traceryQuote= {
 "emotion",
 "time",
 "today",
-"peace"
+"peace",
+"culture",
+"nature",
+"someone"
 ],
 
 "posVerb":["see",
@@ -341,7 +350,11 @@ traceryQuote= {
 "take",
 "welcome",
 "choose",
-"amplify"
+"amplify",
+"free",
+"shine on",
+"challenge",
+"play"
 
 ],
 
@@ -368,7 +381,13 @@ traceryQuote= {
 "friend",
 "eye",
 "pants",
-"word"
+"word",
+"fox",
+"star",
+"moon",
+"gem",
+"shine",
+"coin"
 ],
 
 "negVerb":[
@@ -380,7 +399,9 @@ traceryQuote= {
 "stop",
 "overshadow",
 "abandon",
-"oversee"
+"oversee",
+"misuse",
+"#posVerb#"
 
 ],
 
@@ -389,11 +410,17 @@ traceryQuote= {
 "within",
 "for you",
 "in #object#",
+"of #magicConcept#",
 "in #magicConcept#",
 "like #magicConcept#",
 "twice",
-"not #negVerb#",
-"#isVerb# #magicConcept#"
+"not #magicConcept#",
+"or #magicConcept#",
+"dont #negVerb#",
+"#isVerb# #magicConcept#",
+"soon",
+"further",
+"now"
 ]
 }
 
