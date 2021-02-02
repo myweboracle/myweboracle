@@ -186,7 +186,7 @@ function whatButtonPressed(){
 	if (!whatClicked) {
 	        
  	whatText = createDiv(
-    	"myweboracle is an exploration into magical computing. By Jonas Otto"
+    	"MyWebOracle is a crystal quote generator powered by magical computing. I did this for art school. @woksi123");
     	
     	);
 
