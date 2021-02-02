@@ -186,7 +186,7 @@ function whatButtonPressed(){
 	if (!whatClicked) {
 	        
  	whatText = createDiv(
-    	"myweboracle is an exploration into magical computing."
+    	"myweboracle is an exploration into magical computing. By Jonas Otto"
     	
     	);
 
@@ -260,6 +260,9 @@ traceryQuote= {
 "saying":[
 "#posVerb.capitalize# your #magicConcept# #magicStateOrNot#",
 
+"#posVerb.capitalize# your #magicConcept#",
+
+
 "Dont #negVerb# your #magicConcept# #magicStateOrNot#",
 
 "#magicConcept.capitalize# #isVerb# #magicConcept# #magicStateOrNot#",
@@ -277,7 +280,7 @@ traceryQuote= {
 "magicStateOrNot":["#magicState#","","",""],
 
 
-"prePo":["a", "the", "your"],
+"prePo":["a", "the", "your", "someones"],
 
 "verb":["#posVerb#", "#posVerb#", "#negVerb#"],
 
@@ -380,7 +383,6 @@ traceryQuote= {
 "fish",
 "friend",
 "eye",
-"pants",
 "word",
 "fox",
 "star",
@@ -399,7 +401,7 @@ traceryQuote= {
 "stop",
 "overshadow",
 "abandon",
-"oversee",
+"overlook",
 "misuse",
 "#posVerb#"
 
