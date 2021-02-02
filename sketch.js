@@ -401,6 +401,8 @@ traceryQuote= {
 "abandon",
 "overlook",
 "misuse",
+"loose",
+"underestimate",
 "#posVerb#"
 
 ],
