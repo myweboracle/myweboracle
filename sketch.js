@@ -187,8 +187,6 @@ function whatButtonPressed(){
 	        
  	whatText = createDiv(
     	"MyWebOracle is a crystal quote generator powered by magical computing. I did this for art school. @woksi123");
-    	
-    	);
 
 	whatText.addClass("popUp");
 	whatClicked=true;
